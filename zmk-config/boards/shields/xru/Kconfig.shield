@@ -1,0 +1,5 @@
+config SHIELD_XRU_LEFT
+    def_bool $(shields_list_contains,xru_left)
+
+config SHIELD_XRU_RIGHT
+    def_bool $(shields_list_contains,xru_right)
