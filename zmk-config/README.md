@@ -8,6 +8,6 @@ podman run -it --rm \
 bareb /bin/bash
 
 
-west build -p -b nice_nano_v2 -d build/right -s app/ -- -DSHIELD=xru_right -DZMK_CONFIG=/workspaces/zmk-config
-west build -p -b nice_nano_v2 -d build/left -s app/ -- -DSHIELD=xru_left -DZMK_CONFIG=/workspaces/zmk-config
+west build -p -b nice_nano_v2 -d build/right -s app/ -- -DSHIELD=xru_right -DZMK_CONFIG=/workspaces/zmk-config \
+west build -p -b nice_nano_v2 -d build/left -s app/ -- -DSHIELD=xru_left -DZMK_CONFIG=/workspaces/zmk-config \
 west build -p -b nice_nano_v2 -d build/reset -s app/ -- -DSHIELD=settings_reset -DZMK_CONFIG=/workspaces/zmk-config
