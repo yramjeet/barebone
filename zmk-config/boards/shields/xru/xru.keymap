@@ -54,10 +54,10 @@
 
         qwert {
             bindings = <
-&kp ESC  &kp Q  &kp W            &kp E         &kp R              &kp T              &kp O             &kp U          &kp I         &kp Y             &kp UNDER      &kp BSPC
+&kp ESC  &kp Q  &kp W            &kp E         &kp R              &kp T              &kp P             &kp U          &kp I         &kp O             &kp UNDER      &kp BSPC
 &kp TAB  &kp A  &hml LEFT_GUI S  &hml LCTRL D  &hml LEFT_SHIFT F  &hml LEFT_ALT G    &hmr RIGHT_ALT H  &hmr RSHIFT J  &hmr RCTRL K  &hmr RIGHT_GUI L  &kp SEMICOLON  &kp SQT
-&mo 3    &kp Z  &kp X            &kp C         &kp V              &kp B              &kp P             &kp N          &kp M         &kp COMMA         &kp DOT        &kp SLASH
-                                 &kp LGUI      &key_repeat        &lyrtp 2 SPACE     &lyrtp 2 ENTER    &key_repeat    &kp RGUI
+&mo 7    &kp Z  &kp X            &kp C         &kp V              &kp B              &kp N             &kp M          &kp Y         &kp COMMA         &kp DOT        &kp SLASH
+                                 &kp LCTRL     &key_repeat        &lyrtp 6 SPACE     &lyrtp 6 ENTER    &key_repeat    &kp RCTRL
             >;
         };
 
@@ -66,12 +66,48 @@
 &trans  &trans  &trans        &trans           &trans  &trans    &trans  &trans  &trans       &trans        &trans  &trans
 &trans  &trans  &hml LCTRL S  &hml LEFT_GUI D  &trans  &trans    &trans  &trans  &hmr RGUI K  &hmr RCTRL L  &trans  &trans
 &trans  &trans  &trans        &trans           &trans  &trans    &trans  &trans  &trans       &trans        &trans  &trans
-                              &trans           &trans  &trans    &trans  &trans  &trans
+                              &kp LGUI         &trans  &trans    &trans  &trans  &kp RGUI
+            >;
+        };
+
+        asdf {
+            bindings = <
+&kp ESC  &kp N1     &kp N2    &kp N3        &kp N4       &kp N5           &kp N6          &kp N7       &kp N8     &kp N9    &kp N0     &kp BSPC
+&kp TAB  &kp GRAVE  &kp S     &kp D         &kp F        &kp G            &kp H           &kp J        &kp K      &kp L     &kp COMMA  &kp DOT
+&mo 7    &kp A      &kp LALT  &kp LEFT_GUI  &key_repeat  &kp LS(UNDER)    &kp EQUAL       &key_repeat  &kp RGUI   &kp RALT  &kp SEMI   &kp APOS
+                              &kp LCTRL     &kp LSHFT    &lt 4 SPACE      &lyrtp 5 ENTER  &kp RSHFT    &kp RCTRL
+            >;
+        };
+
+        mac2 {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &kp LCTRL  &trans  &trans    &trans  &trans  &kp RCTRL  &trans  &trans  &trans
+                        &kp LGUI   &trans  &trans    &trans  &trans  &kp RGUI
+            >;
+        };
+
+        raise {
+            bindings = <
+&trans  &kp EXCL       &kp N0  &kp DOLLAR  &kp LS(LPAR)  &kp LS(RPAR)    &kp LEFT      &kp UP  &kp DOWN  &kp RIGHT  &trans    &trans
+&trans  &kp LS(TILDE)  &kp W   &kp E       &kp R         &kp T           &kp Y         &kp U   &kp I     &kp O      &kp FSLH  &kp BSLH
+&trans  &kp Q          &trans  &trans      &trans        &kp LS(LBRC)    &kp LS(RBRC)  &trans  &trans    &trans     &kp P     &trans
+                               &trans      &trans        &trans          &trans        &trans  &trans
+            >;
+        };
+
+        lower {
+            bindings = <
+&trans  &trans  &trans  &trans  &kp LBKT  &kp RBKT    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp X   &kp C   &kp V     &kp B       &kp B   &kp N   &kp M   &trans  &trans  &trans
+&trans  &kp Z   &trans  &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans      &trans  &trans  &trans
             >;
         };
 
         num {
-            bindings = <
+           bindings = <
 &kp CARET  &kp N1    &kp N2       &kp N3      &kp N4          &kp N5             &kp N6     &kp N7    &kp N8    &kp N9     &kp N0     &kp BSPC
 &kp TILDE  &kp EXCL  &kp AT       &kp HASH    &kp LPAR        &kp RPAR           &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &kp ASTRK  &kp BACKSLASH
 &kp LCTRL  &kp AMPS  &kp PERCENT  &kp DOLLAR  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp LBKT   &kp RBKT  &kp N0    &kp MINUS  &kp PLUS   &kp RCTRL
@@ -82,7 +118,7 @@
         funk {
             bindings = <
 &kp F12  &kp F1         &kp F2        &kp F3          &kp F4         &kp F5           &kp F6          &kp F7          &kp F8        &kp F9           &kp F10        &kp F11
-&tog 1   &bt BT_SEL 0   &bt BT_SEL 1  &none           &bt BT_DISC 0  &bt BT_DISC 1    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bt BT_DISC 2  &bt BT_CLR
+&tog 1   &bt BT_SEL 0   &bt BT_SEL 1  &tog 3          &bt BT_DISC 0  &bt BT_DISC 1    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &bt BT_DISC 2  &bt BT_CLR
 &trans   &kp C_BRI_DEC  &kp C_BRI_UP  &kp C_MUTE      &kp C_VOL_DN   &kp C_VOL_UP     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &bt BT_SEL 2   &bt BT_CLR_ALL
                                       &kp LEFT_SHIFT  &kp LCTRL      &trans           &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;

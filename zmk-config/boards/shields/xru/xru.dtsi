@@ -9,9 +9,6 @@
 };
 
 / {
-    model = "Corne-ish Zen";
-    compatible = "corneish_zen";
-
     chosen {
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
